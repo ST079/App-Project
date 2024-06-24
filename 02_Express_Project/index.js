@@ -16,7 +16,7 @@ mongoose.connect(process.env.DB).then(() => {
 // uses
 app.use(express.json());
 app.use(express.static("public"));
-app.use("/", indexRouter);
+app.use(process.env.VERSION, indexRouter);
 
 //middleware
 app.use(errorMiddleware);
