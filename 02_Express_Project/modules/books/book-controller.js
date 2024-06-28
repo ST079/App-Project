@@ -8,16 +8,16 @@ const get = () => {
   return bookSchema.find();
 };
 
-const getById = ({ id }) => {
-  return bookSchema.findOne({ id });
+const getById = (_id) => {
+  return bookSchema.findOne({ _id });
 };
 
-const updateById = ({ id }, payload) => {
-  return bookSchema.updateOne({ id }, payload);
+const updateById = (_id, payload) => {
+  return bookSchema.updateOne({ _id }, payload);
 };
 
-const deleteById = ({ id }) => {
-  return bookSchema.deleteOne({ id });
+const deleteById = (_id) => {
+  return bookSchema.deleteOne({ _id });
 };
 
 module.exports = { create, get, getById, updateById, deleteById };
